@@ -7,6 +7,10 @@ import {Footer} from "./components/Footer";
 
 class App extends React.Component {
     render() {
+        const user = {
+            name: "Lily",
+            hobbies: ["sports", "pc"]
+        };
         return (
             <div className="container">
                 <div className="row">
@@ -16,7 +20,9 @@ class App extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home/>
+                        <Home name={"Jhon"} age={18} user={user}>
+                            <p>This is a paragraph!</p>
+                        </Home>
                     </div>
                 </div>
                 <div className="row">
@@ -31,14 +37,6 @@ class App extends React.Component {
 render(<App/>, window.document.getElementById("app"));
 
 
-/*function sayHi(who) {
-    if (Array.isArray(who)) {
-        who.forEach(sayHi)
-    } else {
-        document.write('<h1>Hello, ' + who + '</h1>');
-    }
-}
-var who = window.prompt('Your name?', undefined);
-sayHi(who); */
+
 
 
